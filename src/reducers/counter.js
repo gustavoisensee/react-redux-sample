@@ -1,10 +1,14 @@
-export default (state = 0, action) => {
+import { INCREMENT, DECREMENT } from '../consts/actionTypes';
+
+const counter = (state = 0, action) => {
   switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
+    case INCREMENT:
+      return state + 1;
+    case DECREMENT:
+      return state - 1;
     default:
-      return state
+      return state;
   }
-}
+};
+
+export default counter;
